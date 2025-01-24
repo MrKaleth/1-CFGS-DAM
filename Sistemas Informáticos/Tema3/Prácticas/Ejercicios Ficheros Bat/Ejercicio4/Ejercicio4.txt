@@ -1,0 +1,17 @@
+@echo off
+mkdir Ejemplo
+
+cd Ejemplo
+type nul > archivo.txt
+cd ..
+
+set /p eliminar=¿Desea eliminar el directorio Ejemplo y su contenido? (S/N): 
+
+if /i "%eliminar%"=="S" (
+    rmdir /s /q Ejemplo
+    echo El directorio Ejemplo y su contenido han sido eliminados.
+) else (
+    echo No se eliminó el directorio Ejemplo.
+)
+pause
+cls
