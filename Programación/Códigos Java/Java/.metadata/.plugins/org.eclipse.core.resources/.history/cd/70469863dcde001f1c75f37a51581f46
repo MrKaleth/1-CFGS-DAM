@@ -1,0 +1,19 @@
+package boletin2;
+
+public class Gatos {
+String color;
+String raza;
+String sexo;
+int edad;
+float peso;
+
+private void maulla() {
+	System.out.println("miauuuuu");
+}
+public boolean maullar() {
+	boolean maullando = true;
+	maulla();
+	return maullando;
+}
+
+}

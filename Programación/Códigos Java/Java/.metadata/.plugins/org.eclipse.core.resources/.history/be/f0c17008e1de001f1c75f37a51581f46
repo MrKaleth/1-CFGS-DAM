@@ -1,0 +1,43 @@
+package boletin2;
+
+public class Gatos {
+    String color;
+    String raza;
+    String sexo;
+    int edad;
+    float peso;
+
+    private void maulla() {
+        System.out.println("Miauuuuu");
+    }
+    
+    public boolean maullar() {
+        maulla();
+        return true;
+    }
+
+    private void ronronea() {
+        System.out.println("Rrrrr");
+    }
+    
+    public boolean ronronear() {
+        ronronea();
+        return true;
+    }
+
+    public void comer(String comida) {
+        if (comida.equals("pescado")) {
+            System.out.println("Yummy Yummy");
+        } else {
+            System.out.println("Buahhh, mejor no");
+        }
+    }
+
+    public void pelear(Gatos otroGato) {
+        if (this.sexo.equals(otroGato.sexo)) {
+            System.out.println("Ven aquí que te vas a enterar");
+        } else {
+            System.out.println("La violencia nunca es la solución");
+        }
+    }
+}
