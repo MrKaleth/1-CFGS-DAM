@@ -1,0 +1,7 @@
+package ejercicioAnimales;
+
+class Animal {
+	String tipo;
+	String nombre;
+	int edad;
+}

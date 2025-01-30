@@ -1,0 +1,42 @@
+package examen;
+
+import java.util.Scanner;
+
+public class Texto {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		Texto r = new Texto();
+		System.out.println("RECUERDA. Cada palabra debe estar separada por comas");
+		System.out.println("Intorduce tu texto: ");
+		String texto = input.nextLine();
+		String [] letras = new String [texto.length()];
+
+		
+		int longitud = texto.length();
+		System.out.println(texto);
+		int consecutivas = r.Comprobador(texto, longitud);
+		System.out.println(consecutivas);
+		input.close();
+	
+	}
+	
+
+	int Comprobador(String texto, int longitud) {
+		int consecutivas = 0;
+		int puntos = 0;
+		for (int i = 0; i < longitud; i++) {
+			if (String.valueOf(i).equals("a") || String.valueOf(i).equals("e") || String.valueOf(i).equals("i") || String.valueOf(i).equals("o") || String.valueOf(i).equals("u")) {
+				puntos++;
+				if(puntos == 2) {
+					consecutivas++;
+					puntos = 0;
+				}
+				
+			}
+		}
+
+		return consecutivas;
+
+	}
+
+}

@@ -1,0 +1,18 @@
+package orientación_A_Objetos;
+
+public class GestionaPokemon {
+	public static void main(String[] args) {
+		Pokemon Pikachu = new Pokemon();
+		Pikachu.nombre = "Pikachu";
+		Pikachu.nivel = 15;
+		Pikachu.tipo = "Eléctrico";
+
+		Pokemon Mewtwo = new Pokemon();
+		Mewtwo.nombre = "Mewtwo";
+		Mewtwo.nivel = 100;
+		Mewtwo.tipo = "Psíquico";
+
+		System.out.println("Pokémon 1: " + Pikachu.nombre + " " + Pikachu.nivel + " " + Pikachu.tipo);
+		System.out.println("Pokémon 2: " + Mewtwo.nombre + " " + Mewtwo.nivel + " " + Mewtwo.tipo);
+	}
+}

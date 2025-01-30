@@ -1,0 +1,7 @@
+package ejercicioProductos;
+
+import ejercicioAnimales.Animal;
+
+public class GestionaAnimales {
+	Animal Perro = new Animal();
+}

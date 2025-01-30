@@ -1,0 +1,15 @@
+package ejercicioAnimales;
+
+public class Animal {
+	String tipo;
+	public String nombre;
+	private int edad;
+
+	boolean caminar() {
+		return true;
+	}
+	
+	void comer() {
+		System.out.println("Estoy comiendo");
+	}
+}

@@ -1,0 +1,22 @@
+package ejercicioProductos;
+
+public class Producto {
+	String nombre;
+	int numUnidades;
+	float precioVenta;
+
+	boolean hayQpedirStock() {
+		boolean hayQpedir = false;
+
+		if (numUnidades == 0) {
+			hayQpedir = true;
+		} else {
+			hayQpedir = false;
+		}
+
+		return hayQpedir;
+	}
+	int aumentaUnidades() {
+		
+	}
+}
