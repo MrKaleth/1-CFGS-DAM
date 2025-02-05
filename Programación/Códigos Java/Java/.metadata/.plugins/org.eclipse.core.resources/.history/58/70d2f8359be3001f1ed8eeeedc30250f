@@ -1,0 +1,10 @@
+package boletin3.Torneo;
+
+public class GetionaTorneo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

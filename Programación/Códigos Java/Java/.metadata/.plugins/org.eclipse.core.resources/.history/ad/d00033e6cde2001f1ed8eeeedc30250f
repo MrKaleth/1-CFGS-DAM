@@ -1,0 +1,16 @@
+package boletin2.Cubo;
+
+public class GestionaLitros {
+    public static void main(String[] args) {
+        Cubo cubo = new Cubo();
+        cubo.setLado(4); // Se establece el lado después de crear el objeto
+
+        System.out.println("Área del cubo: " + cubo.getArea() + " cm²");
+        System.out.println("Volumen del cubo: " + cubo.getVolumen() + " litros");
+
+        System.out.println("Rellenar 6L: " + cubo.rellenar(6));
+        System.out.println("Vaciar 4L: " + cubo.vaciar(4));
+        System.out.println("Vaciar 3L: " + cubo.vaciar(3)); // Debería fallar
+        System.out.println("Rellenar 16L: " + cubo.rellenar(16)); // Debería fallar
+    }
+}

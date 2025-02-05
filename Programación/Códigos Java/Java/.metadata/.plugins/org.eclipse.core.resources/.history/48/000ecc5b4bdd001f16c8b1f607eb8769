@@ -1,8 +1,0 @@
-package orientación_A_Objetos;
-
-public class Pokemon1 {
-	String nombre;
-	int nivel;
-	String tipo;
-	
-}

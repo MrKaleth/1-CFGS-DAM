@@ -12,7 +12,6 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="examen.Texto"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="javax.lang.model.element.Element"/>
     <fullyQualifiedTypeName name="java.lang.Package"/>
     <fullyQualifiedTypeName name="orientación_A_Objetos.Pokemon1"/>
@@ -20,7 +19,11 @@
     <fullyQualifiedTypeName name="java.lang.Float"/>
     <fullyQualifiedTypeName name="alumnos.Alumno"/>
     <fullyQualifiedTypeName name="ejercicioProductos.Producto"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="ejercicioAnimales.Animal"/>
     <fullyQualifiedTypeName name="boletin2.Gatos"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="ejemploPersonaEquipo.Equipo"/>
+    <fullyQualifiedTypeName name="ejemploPersonaEquipo.Persona"/>
+    <fullyQualifiedTypeName name="java.nio.file.spi.FileSystemProvider"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

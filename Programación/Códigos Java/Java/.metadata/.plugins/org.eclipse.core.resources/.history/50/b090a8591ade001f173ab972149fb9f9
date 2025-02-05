@@ -1,7 +1,0 @@
-package ejercicioAnimales;
-
-public class Animal {
-	String tipo;
-	String nombre;
-	int edad;
-}

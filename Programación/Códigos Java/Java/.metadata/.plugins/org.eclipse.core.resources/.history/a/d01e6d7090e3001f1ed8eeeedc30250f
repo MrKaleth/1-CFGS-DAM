@@ -1,0 +1,9 @@
+package boletin2.Cubo;
+
+public class Cubo {
+    private double lado;
+    private double volumen;
+    private double area;
+    private double litros;
+
+}
