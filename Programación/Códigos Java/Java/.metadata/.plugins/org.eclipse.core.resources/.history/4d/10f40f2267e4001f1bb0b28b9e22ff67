@@ -50,7 +50,7 @@ public class Partida {
     }
     
     Participante jugadorGanador() {
-    	this.ganador = this.obtenerJugadorConMayorPuntuacion();
+    	Participante ganador = this.obtenerJugadorConMayorPuntuacion();
     	return ganador;
     	
     }
