@@ -10,11 +10,16 @@ public class GestionaTorneo {
         Participante[] jugadores = { p1, p2, p3, p4 };
 
         Partida catán = new Partida("Catán", jugadores);
+        Partida dixit = new Partida("Dixit", jugadores);
+        Partida carcassone = new Partida("Carcassonne", jugadores);
 
-        catán.jugadorGanador();
-   
+        catán.ganador = catán.obtenerJugadorConMayorPuntuacion();
+        dixit.ganador = dixit.obtenerJugadorConMayorPuntuacion();
+        carcassone.ganador = carcassone.obtenerJugadorConMayorPuntuacion();
+
         System.out.println("Resultados del Torneo:");
         System.out.println(catán);
-        
+        System.out.println(dixit);
+        System.out.println(carcassone);
     }
 }
