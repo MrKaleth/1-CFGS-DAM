@@ -25,9 +25,11 @@
     <fullyQualifiedTypeName name="ejemploPersonaEquipo.Equipo"/>
     <fullyQualifiedTypeName name="ejemploPersonaEquipo.Persona"/>
     <fullyQualifiedTypeName name="java.nio.file.spi.FileSystemProvider"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="boletin3.CuentaBancaria.Persona"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="boletin3.CuentaBanco.CuentaBancaria"/>
+    <fullyQualifiedTypeName name="boletin3.CuentaBanco.Persona"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
