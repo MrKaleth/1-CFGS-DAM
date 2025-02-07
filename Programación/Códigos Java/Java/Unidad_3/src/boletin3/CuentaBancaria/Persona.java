@@ -1,4 +1,4 @@
-package boletin3.CuentaBanco;
+package boletin3.CuentaBancaria;
 
 import java.time.LocalDate;
 

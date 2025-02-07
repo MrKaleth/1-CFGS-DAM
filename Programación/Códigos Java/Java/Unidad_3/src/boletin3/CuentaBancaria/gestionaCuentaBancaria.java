@@ -1,4 +1,4 @@
-package boletin3.CuentaBanco;
+package boletin3.CuentaBancaria;
 
 import java.time.LocalDate;
 
@@ -10,11 +10,10 @@ public class gestionaCuentaBancaria {
 		Persona titular = new Persona("12345678A", "Pepe", "López", fechaNam);
 
 		CuentaBancaria cuenta = new CuentaBancaria(0.0, "ES123456789123456789123456", titular);
-		/*cuenta.setSaldo(10);*/
+		/* cuenta.setSaldo(10); */
 
 		System.out.println(fechaNam);
-		
-		cuenta.ingresarDinero(titular,100);
+
 	}
 
 }
