@@ -1,19 +1,24 @@
 package boletin3.CuentaBanco;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Persona {
 	private String dni;
-	private String nombre;
-	private String apellidos;
-	private LocalDateTime fechaNacimiento;
+	private String nombre, apellidos;
+	private LocalDate fechaNacimiento;
 
-	public Persona(String dni, String nombre, String apellidos, LocalDateTime fechaNacimiento) {
+	public Persona(String dni, String nombre, String apellidos, LocalDate fechaNacimiento) {
 		super();
 		this.dni = dni;
 		this.nombre = nombre;
 		this.apellidos = apellidos;
 		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	@Override
+	public String toString() {
+		return "Persona [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", fechaNacimiento="
+				+ fechaNacimiento + "]";
 	}
 
 	public String getDni() {
@@ -40,18 +45,12 @@ public class Persona {
 		this.apellidos = apellidos;
 	}
 
-	public LocalDateTime getFechaNacimiento() {
+	public LocalDate getFechaNacimiento() {
 		return fechaNacimiento;
 	}
 
-	public void setFechaNacimiento(LocalDateTime fechaNacimiento) {
+	public void setFechaNacimiento(LocalDate fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
-	}
-
-	@Override
-	public String toString() {
-		return "Persona [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", fechaNacimiento="
-				+ fechaNacimiento + "]";
 	}
 
 }
