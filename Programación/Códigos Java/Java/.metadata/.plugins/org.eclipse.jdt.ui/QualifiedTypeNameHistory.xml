@@ -3,13 +3,11 @@
     <fullyQualifiedTypeName name="retos.HackGrinch"/>
     <fullyQualifiedTypeName name="repaso.RepasoCadenas"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="boletínEjerciciosSimilaresII.Ejercicio1"/>
     <fullyQualifiedTypeName name="boletín8.Ejercicio3"/>
     <fullyQualifiedTypeName name="java.lang.Boolean"/>
     <fullyQualifiedTypeName name="simulacro.ApuestaDados"/>
     <fullyQualifiedTypeName name="examen.Pokedex1"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="examen.Texto"/>
     <fullyQualifiedTypeName name="javax.lang.model.element.Element"/>
@@ -21,7 +19,6 @@
     <fullyQualifiedTypeName name="ejercicioProductos.Producto"/>
     <fullyQualifiedTypeName name="ejercicioAnimales.Animal"/>
     <fullyQualifiedTypeName name="boletin2.Gatos"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="ejemploPersonaEquipo.Equipo"/>
     <fullyQualifiedTypeName name="ejemploPersonaEquipo.Persona"/>
     <fullyQualifiedTypeName name="java.nio.file.spi.FileSystemProvider"/>
@@ -31,5 +28,8 @@
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="boletin3.CuentaBanco.CuentaBancaria"/>
     <fullyQualifiedTypeName name="boletin3.CuentaBanco.Persona"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
