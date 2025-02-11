@@ -13,6 +13,8 @@ public class gestionaCuentaBancaria {
 		/* cuenta.setSaldo(10); */
 
 		System.out.println(fechaNam);
+		System.out.println(titular);
+		System.out.println(cuenta);
 
 	}
 
