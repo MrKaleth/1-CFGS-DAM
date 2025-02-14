@@ -1,10 +1,11 @@
 package boletinHerencia.Actividades1;
 
-class CocheElectrico extends Vehiculo {
+class CocheElectrico extends Automovil {
     private String tipoBateria;
 
-	public CocheElectrico(String dueño, int numPuertas, int numRuedas, String tipoBateria) {
-		super(dueño, numPuertas, numRuedas);
+	public CocheElectrico(String dueño, int numPuertas, int numRuedas, CalificacionEcologica calificacionEcologica,
+			String tipoBateria) {
+		super(dueño, numPuertas, numRuedas, calificacionEcologica.O);
 		this.tipoBateria = tipoBateria;
 	}
 

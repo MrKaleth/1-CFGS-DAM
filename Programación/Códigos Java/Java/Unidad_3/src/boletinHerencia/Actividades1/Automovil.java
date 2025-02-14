@@ -1,19 +1,30 @@
 package boletinHerencia.Actividades1;
 
 class Automovil extends Vehiculo {
-	private String calificacionEcologica;
+	private CalificacionEcologica calificacionEcologica = CalificacionEcologica.ECO;
 
-	public Automovil(String dueño, int numPuertas, int numRuedas, String calificacionEcologica) {
-		super(dueño, numPuertas, numRuedas);
-		this.calificacionEcologica = calificacionEcologica;
+	protected enum CalificacionEcologica {
+		ECO, O, B, C;
 	}
 
-	public String getCalificacionEcologica() {
+	public Automovil(String dueño, int numPuertas, int numRuedas, CalificacionEcologica calificacionEcologica) {
+		super(dueño, numPuertas, numRuedas);
+		setCalificacionEcologica(calificacionEcologica);
+	}
+
+	public CalificacionEcologica getCalificacionEcologica() {
 		return calificacionEcologica;
 	}
 
-	public void setCalificacionEcologica(String calificacionEcologica) {
-		this.calificacionEcologica = calificacionEcologica;
+	public void setCalificacionEcologica(CalificacionEcologica calificacionEcologica) {
+		if (calificacionEcologica.equals(calificacionEcologica.ECO)
+				|| calificacionEcologica.equals(calificacionEcologica.O)
+				|| calificacionEcologica.equals(calificacionEcologica.B)
+				|| calificacionEcologica.equals(calificacionEcologica.C)) {
+
+			this.calificacionEcologica = calificacionEcologica;
+
+		}
 	}
 
 	public boolean tieneLimitacionParaCircular(String ciudad, char tipoVehiculo) {
@@ -40,7 +51,6 @@ class Automovil extends Vehiculo {
 
 		return restriccion;
 	}
-
 
 	@Override
 	public String toString() {
