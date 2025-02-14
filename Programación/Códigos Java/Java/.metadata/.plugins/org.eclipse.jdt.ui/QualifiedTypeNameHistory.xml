@@ -34,4 +34,10 @@
     <fullyQualifiedTypeName name="boletinHerencia.Actividades.Vehiculo"/>
     <fullyQualifiedTypeName name="ejemplo.PersonaHerencia.Persona"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="ejemplo.Enum.DiaSemana"/>
+    <fullyQualifiedTypeName name="java.lang.Enum"/>
+    <fullyQualifiedTypeName name="ejemplo.Enum.Reserva.Mes"/>
+    <fullyQualifiedTypeName name="boletinHerencia.Actividades1.Automovil.CalificacionEcologica"/>
+    <fullyQualifiedTypeName name="boletinHerencia.Actividades1.Automovil"/>
+    <fullyQualifiedTypeName name="simulacro1.Conductor"/>
 </qualifiedTypeNameHistroy>
