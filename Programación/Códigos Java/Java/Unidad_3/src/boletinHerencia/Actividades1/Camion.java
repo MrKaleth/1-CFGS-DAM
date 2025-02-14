@@ -1,4 +1,4 @@
-package boletinHerencia.Actividades;
+package boletinHerencia.Actividades1;
 
 class Camion extends Vehiculo {
     private int tonelajeKilos, numPasajeros, numEjes;
@@ -35,12 +35,18 @@ class Camion extends Vehiculo {
     }
 
     public String[] getLicencias() {
-        return new String[]{"Licencia A", "Licencia B", "Licencia C"};
-    }
-
-    @Override
-    public void imprimeResumen() {
-        System.out.println("Camión de " + dueño + " con " + numPuertas + " puertas, " + numRuedas + " ruedas y " + numEjes + " ejes.");
+        if (tonelajeKilos > 7500) {
+            return new String[]{"C", "C+E"}; // Puede conducir cualquier camión sin límite de tonelaje y enganchar remolques pesados
+        } else if (tonelajeKilos > 3500) {
+            if (numEjes > 2) {
+                return new String[]{"C", "C+E"}; // Vehículos más pesados, se requiere C+E para remolques
+            }
+            return new String[]{"C", "C1"}; // Camión entre 3.500 y 7.500 kg sin remolque pesado
+        } else if (tonelajeKilos > 3500 && tonelajeKilos <= 7500) {
+            return new String[]{"C1", "C1+E"}; // Vehículos entre 3.500 y 7.500 kg con posibilidad de remolque
+        } else {
+            return new String[]{"C"}; // Cubre la mayoría de camiones sin especificar remolques
+        }
     }
 
     @Override
