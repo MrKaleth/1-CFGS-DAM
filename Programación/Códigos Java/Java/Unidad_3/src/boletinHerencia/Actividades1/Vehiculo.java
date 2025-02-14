@@ -1,4 +1,4 @@
-package boletinHerencia.Actividades;
+package boletinHerencia.Actividades1;
 
 class Vehiculo {
     protected String dueño;
@@ -34,7 +34,10 @@ class Vehiculo {
         this.numRuedas = numRuedas;
     }
 
-    public void imprimeResumen() {
-        System.out.println("Vehículo de " + dueño + " con " + numPuertas + " puertas y " + numRuedas + " ruedas.");
-    }
+	@Override
+	public String toString() {
+		return "Vehiculo [dueño=" + dueño + ", numPuertas=" + numPuertas + ", numRuedas=" + numRuedas + "]";
+	}
+
+   
 }
