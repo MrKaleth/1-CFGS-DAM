@@ -1,10 +1,12 @@
 package boletinHerencia.Actividades1;
 
+import boletinHerencia.Actividades1.Automovil.CalificacionEcologica;
+
 public class GestionaVehiculo {
     public static void main(String[] args) {
         // Crear automóviles
-        Automovil autoECO = new Automovil("Juan", 4, 4, "ECO");
-        Automovil autoC = new Automovil("Maria", 4, 4, "C");
+        Automovil autoECO = new Automovil("Juan", 4, 4, CalificacionEcologica.ECO);
+        Automovil autoC = new Automovil("Maria", 4, 4, CalificacionEcologica.C);
 
         // Comprobar restricciones de circulación
         System.out.println("¿El automóvil ECO tiene restricción en Madrid? " + autoECO.tieneLimitacionParaCircular("Madrid", 'E'));
