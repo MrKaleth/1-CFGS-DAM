@@ -1,8 +1,0 @@
-package boletin3.Torneo;
-
-public class Partida {
-String nickname;
-String nombre;
-int edad;
-int puntuacion;
-}
