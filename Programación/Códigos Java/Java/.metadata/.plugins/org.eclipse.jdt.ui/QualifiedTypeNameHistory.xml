@@ -40,4 +40,8 @@
     <fullyQualifiedTypeName name="boletinHerencia.Actividades1.Automovil"/>
     <fullyQualifiedTypeName name="simulacro1.Conductor"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="gestionEmpleados.Empleado"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="gestionEmpleados.Administrativo"/>
+    <fullyQualifiedTypeName name="gestionEmpleados.Directivo"/>
 </qualifiedTypeNameHistroy>
