@@ -6,7 +6,8 @@ public class Ejercicio10 {
 		int elementoBuscar = 6;
 		int indiceEncontrado = busquedaBinaria(array, elementoBuscar);
 		if (indiceEncontrado != -1) {
-			System.out.println("El elemento " + elementoBuscar + " se encuentra en el índice " + indiceEncontrado + ".");
+			System.out
+					.println("El elemento " + elementoBuscar + " se encuentra en el índice " + indiceEncontrado + ".");
 		} else {
 			System.out.println("El elemento " + elementoBuscar + " no se encuentra en el array.");
 		}
