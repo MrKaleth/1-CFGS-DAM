@@ -22,18 +22,13 @@
     <fullyQualifiedTypeName name="ejemploPersonaEquipo.Equipo"/>
     <fullyQualifiedTypeName name="ejemploPersonaEquipo.Persona"/>
     <fullyQualifiedTypeName name="java.nio.file.spi.FileSystemProvider"/>
-    <fullyQualifiedTypeName name="java.sql.Date"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
     <fullyQualifiedTypeName name="boletin3.CuentaBancaria.Persona"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="boletin3.CuentaBanco.CuentaBancaria"/>
     <fullyQualifiedTypeName name="boletin3.CuentaBanco.Persona"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="boletinHerencia.Actividades.Vehiculo"/>
     <fullyQualifiedTypeName name="ejemplo.PersonaHerencia.Persona"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="ejemplo.Enum.DiaSemana"/>
     <fullyQualifiedTypeName name="java.lang.Enum"/>
     <fullyQualifiedTypeName name="ejemplo.Enum.Reserva.Mes"/>
     <fullyQualifiedTypeName name="boletinHerencia.Actividades1.Automovil.CalificacionEcologica"/>
@@ -45,4 +40,15 @@
     <fullyQualifiedTypeName name="gestionEmpleados.Directivo"/>
     <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.java_lang_Class"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="ejemplo.Enum.DiaSemana"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="ejemplo.PersonaEquipo.Equipo"/>
+    <fullyQualifiedTypeName name="simulacroIncidentesSeguridad.Equipo"/>
+    <fullyQualifiedTypeName name="simulacroIncidentesSeguridad.EstadoIncidente"/>
+    <fullyQualifiedTypeName name="simulacroIncidentesSeguridad.Criticidad"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="simulacroIncidentesSeguridad.Incidente"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="simulacroIncidentesSeguridad.Usuario"/>
 </qualifiedTypeNameHistroy>
