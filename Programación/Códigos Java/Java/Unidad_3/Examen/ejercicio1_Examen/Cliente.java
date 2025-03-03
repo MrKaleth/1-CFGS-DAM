@@ -13,7 +13,6 @@ public class Cliente {
 	private boolean vipONo;
 	private Menu menu;
 
-
 	public Cliente(String dni, String nombre, String apellidos, int edad, TipoDieta dietaAsignada,
 			LocalDate fechaInscripcion, boolean vipONo, Menu menu) {
 		super();
@@ -88,7 +87,6 @@ public class Cliente {
 	protected void setVipONo(boolean vipONo) {
 		this.vipONo = vipONo;
 	}
-	
 
 	protected Menu getMenu() {
 		return menu;
@@ -117,24 +115,21 @@ public class Cliente {
 
 	private boolean hayQueHAcerPromocion() {
 		boolean promocion = false;
-		if(this.vipONo = true) {
+		if (this.vipONo = true) {
 			promocion = true;
-		}
-		else if (edad >= 65) {
+		} else if (edad >= 65) {
 			promocion = true;
-		}
-		else {
+		} else {
 			promocion = false;
 		}
 		return promocion;
 	}
-	
+
 	public void calculaPrecioPromocion() {
-		if(hayQueHAcerPromocion()) {
+		if (hayQueHAcerPromocion()) {
 			this.menu.calculaPrecioPromocion();
 		}
-		
-		
+
 	}
 
 	@Override

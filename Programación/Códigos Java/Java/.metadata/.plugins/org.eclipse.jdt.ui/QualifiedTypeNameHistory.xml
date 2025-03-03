@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="retos.HackGrinch"/>
     <fullyQualifiedTypeName name="repaso.RepasoCadenas"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="boletínEjerciciosSimilaresII.Ejercicio1"/>
@@ -35,7 +34,6 @@
     <fullyQualifiedTypeName name="boletinHerencia.Actividades1.Automovil"/>
     <fullyQualifiedTypeName name="simulacro1.Conductor"/>
     <fullyQualifiedTypeName name="gestionEmpleados.Empleado"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="gestionEmpleados.Administrativo"/>
     <fullyQualifiedTypeName name="gestionEmpleados.Directivo"/>
     <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.java_lang_Class"/>
@@ -47,8 +45,19 @@
     <fullyQualifiedTypeName name="simulacroIncidentesSeguridad.Equipo"/>
     <fullyQualifiedTypeName name="simulacroIncidentesSeguridad.EstadoIncidente"/>
     <fullyQualifiedTypeName name="simulacroIncidentesSeguridad.Criticidad"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="simulacroIncidentesSeguridad.Incidente"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="simulacroIncidentesSeguridad.Usuario"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="ejercicio1_Examen.Menu"/>
+    <fullyQualifiedTypeName name="ejercicio1_Examen.Cliente"/>
+    <fullyQualifiedTypeName name="ejercicio1_Examen.TipoDieta"/>
+    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="ejercicio2_Examen.Computadora"/>
+    <fullyQualifiedTypeName name="ejercicio2_Examen.Telefono"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="ejercicio2_Examen.Laptop"/>
+    <fullyQualifiedTypeName name="ejercicio2_Examen.Smartphone"/>
+    <fullyQualifiedTypeName name="ejercicio2_Examen.PCSobremesa"/>
+    <fullyQualifiedTypeName name="ejercicio2_Examen.Dispositivo"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>
