@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="repaso.RepasoCadenas"/>
-    <fullyQualifiedTypeName name="java.lang.Character"/>
-    <fullyQualifiedTypeName name="boletínEjerciciosSimilaresII.Ejercicio1"/>
-    <fullyQualifiedTypeName name="boletín8.Ejercicio3"/>
-    <fullyQualifiedTypeName name="java.lang.Boolean"/>
-    <fullyQualifiedTypeName name="simulacro.ApuestaDados"/>
-    <fullyQualifiedTypeName name="examen.Pokedex1"/>
-    <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="examen.Texto"/>
     <fullyQualifiedTypeName name="javax.lang.model.element.Element"/>
     <fullyQualifiedTypeName name="java.lang.Package"/>
     <fullyQualifiedTypeName name="orientación_A_Objetos.Pokemon1"/>
@@ -47,17 +38,26 @@
     <fullyQualifiedTypeName name="simulacroIncidentesSeguridad.Criticidad"/>
     <fullyQualifiedTypeName name="simulacroIncidentesSeguridad.Incidente"/>
     <fullyQualifiedTypeName name="simulacroIncidentesSeguridad.Usuario"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="ejercicio1_Examen.Menu"/>
     <fullyQualifiedTypeName name="ejercicio1_Examen.Cliente"/>
     <fullyQualifiedTypeName name="ejercicio1_Examen.TipoDieta"/>
     <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="ejercicio2_Examen.Computadora"/>
     <fullyQualifiedTypeName name="ejercicio2_Examen.Telefono"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="ejercicio2_Examen.Laptop"/>
     <fullyQualifiedTypeName name="ejercicio2_Examen.Smartphone"/>
     <fullyQualifiedTypeName name="ejercicio2_Examen.PCSobremesa"/>
     <fullyQualifiedTypeName name="ejercicio2_Examen.Dispositivo"/>
+    <fullyQualifiedTypeName name="modelo.Perro"/>
+    <fullyQualifiedTypeName name="modelo.Gato"/>
+    <fullyQualifiedTypeName name="modelo.Animal"/>
+    <fullyQualifiedTypeName name="modelo.Pez"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="geometria.Modelo.Triangulo"/>
+    <fullyQualifiedTypeName name="geometria.Modelo.Figura"/>
+    <fullyQualifiedTypeName name="geometria.Modelo.Circulo"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="tiendaAnimales.Modelo.Mascota"/>
+    <fullyQualifiedTypeName name="tiendaAnimales.Modelo.Ave"/>
 </qualifiedTypeNameHistroy>
