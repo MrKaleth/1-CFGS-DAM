@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.lang.model.element.Element"/>
-    <fullyQualifiedTypeName name="java.lang.Package"/>
     <fullyQualifiedTypeName name="orientación_A_Objetos.Pokemon1"/>
     <fullyQualifiedTypeName name="orientación_A_Objetos.Pokemon"/>
     <fullyQualifiedTypeName name="java.lang.Float"/>
@@ -56,8 +54,10 @@
     <fullyQualifiedTypeName name="geometria.Modelo.Triangulo"/>
     <fullyQualifiedTypeName name="geometria.Modelo.Figura"/>
     <fullyQualifiedTypeName name="geometria.Modelo.Circulo"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="tiendaAnimales.Modelo.Mascota"/>
     <fullyQualifiedTypeName name="tiendaAnimales.Modelo.Ave"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="factoriaCoches.Modelo.Robot"/>
+    <fullyQualifiedTypeName name="factoriaCoches.Modelo.Estado"/>
 </qualifiedTypeNameHistroy>
