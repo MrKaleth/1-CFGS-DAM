@@ -279,5 +279,13 @@ update ventas
 set fecha = '2001-11-12'
 where codpj in ('J1', 'J2');
 
-
+-- Ejercicio 22 --
+/*Construir una lista ordenada de todas las ciudades en las que al menos resida
+un proveedor o suministrador, una pieza o un proyecto*/
+select ciudad from proveedor
+union
+select ciudad from pieza
+union
+select ciudad from proyecto
+order by ciudad;
 
