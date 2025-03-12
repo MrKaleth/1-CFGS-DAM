@@ -55,8 +55,12 @@ public class Libro extends Recurso implements IPrestable {
 
 	@Override
 	public int getDevuelveDiasPrestamo() {
-	    return 21;
+		return 21;
 	}
 
+	@Override
+	public String toString() {
+		return "Libro [autor=" + autor + ", editorial=" + editorial + ", genero=" + genero + "]";
+	}
 
 }

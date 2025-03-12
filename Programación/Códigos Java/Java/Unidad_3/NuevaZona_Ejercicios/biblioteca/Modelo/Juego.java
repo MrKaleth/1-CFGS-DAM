@@ -1,6 +1,6 @@
 package biblioteca.Modelo;
 
-public class Juego extends ElementoMultimedia implements IPrestable{
+public class Juego extends ElementoMultimedia implements IPrestable {
 	private int numeroFases;
 	private boolean disponible;
 
@@ -29,14 +29,19 @@ public class Juego extends ElementoMultimedia implements IPrestable{
 
 	@Override
 	public boolean estaDisponible() {
-	    return disponible;
+		return disponible;
 	}
-
 
 	@Override
 	public int getDevuelveDiasPrestamo() {
-	    return 10;
+		return 10;
 	}
 
+	@Override
+	public String toString() {
+		return "Juego [numeroFases=" + numeroFases +"]";
+	}
+
+	
 
 }
