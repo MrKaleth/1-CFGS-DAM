@@ -156,14 +156,60 @@ DATEDIFF(CONCAT('2025-', MONTH(fecha_nac), '-', DAY(fecha_nac)), CURDATE()),
 -- Ejercicio 5 --
 /*Muestra el nombre y los apellidos de aquellos profesores con DNI par*/
 select nombre, apellidos
-from profesor
-where right(dni, 1) in ('0', '2', '4', '6', '8');
+from alumno
+where right(left(dni, length(dni) - 1), 1) in ('0', '2', '4', '6', '8');
+
 
 -- Ejercicio 6 --
 /*Muestra el nombre de los apellidos junto a su identificador en séneca (ID_Prof),
 sabiendo que está formado por la primera letra de su nombre, y las tres primeras
 letras de cada uno de los apellidos, junto a las 3 últimas letras de su DNI (sin
 contar la letra)*/
+select concat(
+        left(nombre, 1), 
+        left(apellidos, 3), 
+        right(substring(DNI, 1, length(DNI) - 1), 3)
+    ) as identificador
+from profesor;
 
+-- Ejercicio 7 --
+/*Muestra la información de los profesores que nacieron en la pronuncia 1 y
+además contengan la letra a en el nombre o en los apellidos*/
+select * from profesor
+where nacido_en = 1
+and (nombre like '%A%' or apellidos like '%A%');
 
+-- Ejercicio 8 --
+/*Muestra el identificador de aquellas asignaturas que son impartidas por
+algún profesor cuyo código es par*/
+select distinct i.id_asig
+from imparte i
+join profesor p on i.id_prof = p.id_prof
+where p.id_prof % 2 = 0;
+
+-- Ejercicio 9 --
+/*Muestra el nombre de la ultima provincia por orden alfabetico*/
+select nombre
+from provincia
+order by nombre desc
+limit 1;
+
+-- Ejercicio 10 --
+/*Muestra la media de notas para cada matriculado junto al valor nominal
+de la misma en función de si se trata de insuficiente(0-5), Suficiente(5), Bien(6),
+Notable(7-8) y Sobresaliente(9-10)*/
+select ID_ALUM, ID_ASIG, 
+       (NOTA1 + NOTA2 + NOTA3) / 3 AS MEDIA,
+       case 
+           when (NOTA1 + NOTA2 + NOTA3) / 3 < 5 then 'Insuficiente'
+           when (NOTA1 + NOTA2 + NOTA3) / 3 = 5 then 'Suficiente'
+           when (NOTA1 + NOTA2 + NOTA3) / 3 = 6 then 'Bien'
+           when (NOTA1 + NOTA2 + NOTA3) / 3 between 7 and 8 then 'Notable'
+           else 'Sobresaliente'
+       end as VALOR_NOMINAL
+from MATRICULADO;
+
+-- Ejercicio 11 --
+select max((NOTA1 + NOTA2 + NOTA3) / 3) as Record_de_calificaciones
+from MATRICULADO;
 
