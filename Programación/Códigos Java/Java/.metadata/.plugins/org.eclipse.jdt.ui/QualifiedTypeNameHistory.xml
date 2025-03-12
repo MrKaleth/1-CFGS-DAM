@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="orientación_A_Objetos.Pokemon1"/>
-    <fullyQualifiedTypeName name="orientación_A_Objetos.Pokemon"/>
-    <fullyQualifiedTypeName name="java.lang.Float"/>
     <fullyQualifiedTypeName name="alumnos.Alumno"/>
     <fullyQualifiedTypeName name="ejercicioProductos.Producto"/>
     <fullyQualifiedTypeName name="ejercicioAnimales.Animal"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="factoriaCoches.Modelo.Robot"/>
     <fullyQualifiedTypeName name="factoriaCoches.Modelo.Estado"/>
+    <fullyQualifiedTypeName name="biblioteca.Modelo.ElementoMultimedia"/>
+    <fullyQualifiedTypeName name="biblioteca.Modelo.IPrestable"/>
+    <fullyQualifiedTypeName name="biblioteca.Modelo.Recurso"/>
 </qualifiedTypeNameHistroy>
