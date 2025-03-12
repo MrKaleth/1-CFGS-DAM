@@ -39,4 +39,11 @@ public class ElementoMultimedia extends Recurso implements IPrestable {
 		return 0;
 	}
 
+	@Override
+	public String toString() {
+		return "ElementoMultimedia [nombre=" + nombre + ", genero=" + genero + "]";
+	}
+	
+	
+
 }
