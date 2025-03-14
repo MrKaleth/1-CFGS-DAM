@@ -10,6 +10,7 @@
 	<classpathentry kind="src" path="Simulacros"/>
 	<classpathentry kind="src" path="CorreccionEva"/>
 	<classpathentry kind="src" path="Examen"/>
-	<classpathentry kind="src" path="NuevaZona_Ejercicios"/>
+	<classpathentry kind="src" path="Herencias__Abstracto_Interfaces"/>
+	<classpathentry kind="src" path="Excepciones"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
