@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE futbol [
+  <!ELEMENT futbol (jugador*)>
+  <!ELEMENT jugador EMPTY>
+  <!ATTLIST jugador nombre NMTOKENS #REQUIRED>
+  <!ATTLIST jugador codigo ID #REQUIRED>
+]>
+
+<futbol>
+  <jugador nombre="Alfredo Di Stéfano" codigo="C1"/>
+  <jugador nombre="Edson Arantes do Nascimento Pelé" codigo="C2" />
+  <jugador nombre="Diego Armando Maradona" codigo="C3" />
+  <jugador nombre="Johan Cruyff" codigo="C4" />
+</futbol>
+
+<!-- El código de xml presentaba varios fallos en si estructura. Para comenzar, los códigos
+ID de los jugadores no presentaban la estructura adecuada a la hora del registro, pues poseían
+únicamente números y el codigo debe estar conformado por letra y número, respectivamente.
+Además, Pelé mantenía otro fallo en la estructura de su nombre pues al estar presente una 
+coma el código lo interpretaba como 2 tokens diferentes y daba error. Al eliminar la coma el 
+fallo es arreglado-->

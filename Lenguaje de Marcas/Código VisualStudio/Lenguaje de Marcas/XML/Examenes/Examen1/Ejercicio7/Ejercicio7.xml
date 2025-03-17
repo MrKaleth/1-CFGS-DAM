@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resoluciones [
+  <!ELEMENT resoluciones (resolucion*)>
+  <!ELEMENT resolucion EMPTY>
+  <!ATTLIST resolucion nombre CDATA #REQUIRED>
+  <!ATTLIST resolucion alto CDATA #REQUIRED>
+  <!ATTLIST resolucion ancho CDATA #REQUIRED>
+]>
+
+<resoluciones>
+  <resolucion nombre="VGA" alto="480" ancho="640" />
+  <resolucion nombre="XGA" alto="1024" ancho="768" />
+  <resolucion nombre="HD 1080" alto="1920" ancho="1080" />
+</resoluciones>
+
+<!-- El principal fallo del código era que, todo se daba a nombre de "Resoluciones",
+pero nada aparecía como resolucion. Para ello se ha creado el elemento resoluciones, que
+engloba resolucion y es este último el que desempeña todas las funciones que en el código
+original desempeñaba resoluciones. Solo se ha añadido un cambio a los ATTLIST y es que, en 
+"nombre", si se resuelve como NMTOKEN da fallo al aparecer un espacio en la tercera
+etiqueta del xml (HD 1080). Es por eso que ha sido cambiado a CDATA-->

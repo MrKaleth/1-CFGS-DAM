@@ -1,0 +1,30 @@
+table, td, th {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td, th {
+    width: 300px;
+    height: 30px;
+}
+
+thead, tfoot {
+    background-color: brown;
+    color: white;
+    text-transform: uppercase;
+}
+
+td:last-child {
+    font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #094293;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: white;
+    color: #094293;
+}

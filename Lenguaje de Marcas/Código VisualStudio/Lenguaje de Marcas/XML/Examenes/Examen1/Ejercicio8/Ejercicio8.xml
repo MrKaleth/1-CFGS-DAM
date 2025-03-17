@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE albumesMortadelo [
+  <!ELEMENT albumesMortadelo (album*)>
+  <!ELEMENT album EMPTY>
+  <!ATTLIST album nombre CDATA #REQUIRED>
+  <!ATTLIST album fecha (1969 | 1970 | 1971 | 1972 | 1973 | 1974) #REQUIRED>
+]>
+
+<albumesMortadelo>
+  <album nombre="El sulfato atómico" fecha="1969"/>
+  <album nombre="La caja de diez cerrojos" fecha="1971"/>
+  <album nombre="El otro yo del profesor Bacterio" fecha="1973"/>
+  <album nombre="Los cacharros majaretas" fecha="1974"/>
+</albumesMortadelo>
+
+<!-- El fallo residía en varios apartados. Para comenzar, album retenía a nombre y fecha
+pero como si fueran etiquetas/elementos hijos, no como apartados dentro de él.
+Esto se soluciona poniendo que sea EMPTY. Además, había un fallo en el apartado de fecha, 
+pues pedía que todas las fechas fueran requeridas. Se solucionó cambiando las "," a "|", que
+significan que debe ser uno de los ahí listados. Esto hace que cualquiera de las fechas por
+separado sea válida y no se muestren errores.-->

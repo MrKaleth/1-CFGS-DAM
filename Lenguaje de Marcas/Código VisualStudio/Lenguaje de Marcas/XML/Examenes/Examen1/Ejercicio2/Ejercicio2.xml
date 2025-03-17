@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sistemaSolar [
+  <!ELEMENT sistemaSolar (cuerpo*)>
+  <!ELEMENT cuerpo (planeta|satelite|asteroide)>
+  <!ELEMENT planeta (#PCDATA)>
+  <!ELEMENT satelite (#PCDATA)>
+  <!ELEMENT asteroide (#PCDATA)>
+]>
+
+<sistemaSolar>
+  <cuerpo>
+    <planeta>Tierra</planeta>
+  </cuerpo>
+  <cuerpo>
+    <asteroide>Ceres</asteroide>
+    </cuerpo>
+</sistemaSolar>
+
+<!-- El error arreglado fueron 2. Para empezar, la indicación | indica que solo puede existir
+dentro de la etiqueta uno de los elementos hijos determinados, y en el xml aparecián varios.
+Además, en el segun cuerpo la propia etiqueta "Cuerpo" no se encontraba en el código,
+así que ha sido añadida.-->

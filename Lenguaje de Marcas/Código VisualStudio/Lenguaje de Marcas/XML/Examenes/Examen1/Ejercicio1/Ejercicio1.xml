@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE agenda [
+  <!ELEMENT agenda (contacto*)>
+  <!ELEMENT contacto (nombre, telefonoFijo*, telefonoMovil+)>
+  <!ELEMENT nombre (#PCDATA)>
+  <!ELEMENT telefonoFijo (#PCDATA)>
+  <!ELEMENT telefonoMovil (#PCDATA)>
+]>
+
+<agenda>
+  <contacto>
+    <nombre>Ayuntamiento</nombre>
+    <telefonoFijo>010</telefonoFijo>
+    <telefonoMovil>021</telefonoMovil> <!-- Añadido "Teléfono movil" -->
+  </contacto>
+  <contacto>
+    <nombre>Emergencias</nombre>
+    <telefonoFijo>112 (Unión Europea)</telefonoFijo>
+    <telefonoMovil>Desconocido</telefonoMovil>
+    <telefonoMovil>911 (Estados Unidos)</telefonoMovil>
+    <!-- Cambiado el segundo teléfonoFijo a teléfonoMovil -->
+  </contacto>
+</agenda>
+
+<!-- El fallo en el xml de este ejercicio es que en el primer contacto 
+no venía el "hijo" TeléfonoMovil, que es necesario para contacto según 
+el dtd. Además, en el segundo contacto figuraban 2 teléfonos fijos,
+cosa que según el dtd no puede ocurrir (*), sin embargo, si que pueden
+existir 2 teléfonos móviles, por lo que simplemente cambié el hijo.-->

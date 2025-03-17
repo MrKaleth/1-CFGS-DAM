@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pruebecita SYSTEM "Prueba2.dtd">
+<pruebecita>
+    <cliente>
+        <nombre>Juan Pérez</nombre>
+        <fecha_inicio>2025-01-01</fecha_inicio>
+        <fecha_fin>2025-01-10</fecha_fin>
+        <origen>Madrid</origen>
+    </cliente>
+    <destinos>
+        <destino>
+            <ciudad>Paris</ciudad>
+            <hotel>Hotel de París</hotel>
+            <noches>3</noches>
+        </destino>
+        <destino>
+            <ciudad>Roma</ciudad>
+            <hotel>Hotel Roma Centro</hotel>
+            <noches>4</noches>
+        </destino>
+        <destino>
+            <ciudad>Venecia</ciudad>
+            <hotel>Hotel Veneciano</hotel>
+            <noches>2</noches>
+        </destino>
+    </destinos>
+</pruebecita>

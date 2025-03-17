@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE contabilidad [
+  <!ELEMENT contabilidad (apunte+)>
+  <!ELEMENT apunte ((ingreso | gasto)+)>
+  <!ELEMENT ingreso (fecha*, cantidad*, concepto*)>
+  <!ELEMENT gasto (fecha*, cantidad*, concepto*)>
+  <!ELEMENT fecha (#PCDATA)>
+  <!ELEMENT cantidad (#PCDATA)>
+  <!ELEMENT concepto (#PCDATA)>
+]>
+
+<contabilidad>
+  <apunte>
+    <ingreso>
+        <fecha>24 de febrero de 2011</fecha>
+        <cantidad>1800,00 €</cantidad>
+        <concepto>Salario</concepto>
+    </ingreso>
+  </apunte>
+  <apunte>
+    <gasto>
+        <fecha>28 de febrero de 2011</fecha>
+        <cantidad>74,25 €</cantidad>
+        <concepto>Recibo luz</concepto>
+        </gasto>
+  </apunte>
+</contabilidad>
+
+<!-- El código presentaba diversos errores de estructura en su dtd. Comenzando 
+porque no existía la etiqueta "Apunte" dentro del dtd, lo que daba lugar a fallo 
+de estructura pues era esta etiqueta la que debía contener a ingreso y a gasto. Además, 
+tampoco se veían referenciadas estas 2 etiquetas, que eran las que debían contener a 
+fecha, cantidad y concepto.-->

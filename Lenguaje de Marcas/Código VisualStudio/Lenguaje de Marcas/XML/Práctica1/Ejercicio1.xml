@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Curso>
+    <Nombre>1ºCFGS DAM</Nombre>
+    <Profesores>
+        <Profesor>
+            <Nombre>Rafa</Nombre>
+            <Asignaturas>
+                <Asignatura>
+                    <Siglas>PMDM</Siglas>
+                    <Nombre>Programación Multimedia</Nombre>
+                    <NotaEsperada>8.5</NotaEsperada>
+                </Asignatura>
+                <Asignatura>
+                    <Siglas>PSP</Siglas>
+                    <Nombre>Programación de Servicios</Nombre>
+                    <NotaEsperada>9.0</NotaEsperada>
+                </Asignatura>
+            </Asignaturas>
+        </Profesor>
+        <Profesor>
+            <Nombre>Soraya</Nombre>
+            <Asignaturas>
+                <Asignatura>
+                    <Siglas>EIE</Siglas>
+                    <Nombre>Empresa e Iniciativa Emprendedora</Nombre>
+                    <NotaEsperada>8.0</NotaEsperada>
+                </Asignatura>
+            </Asignaturas>
+        </Profesor>
+        <Profesor>
+            <Nombre>Isabel</Nombre>
+            <Asignaturas>
+                <Asignatura>
+                    <Siglas>DEINT</Siglas>
+                    <Nombre>Desarrollo de Interfaces</Nombre>
+                    <NotaEsperada>8.7</NotaEsperada>
+                </Asignatura>
+                <Asignatura>
+                    <Siglas>DI</Siglas>
+                    <Nombre>Diseño de Interfaces</Nombre>
+                    <NotaEsperada>9.2</NotaEsperada>
+                </Asignatura>
+            </Asignaturas>
+        </Profesor>
+        <Profesor>
+            <Nombre>Jesús</Nombre>
+            <Asignaturas>
+                <Asignatura>
+                    <Siglas>SGE</Siglas>
+                    <Nombre>Sistemas de Gestión Empresarial</Nombre>
+                    <NotaEsperada>7.8</NotaEsperada>
+                </Asignatura>
+                <Asignatura>
+                    <Siglas>HLC</Siglas>
+                    <Nombre>Horas de Libre Configuración</Nombre>
+                    <NotaEsperada>8.3</NotaEsperada>
+                </Asignatura>
+            </Asignaturas>
+        </Profesor>
+        <Profesor>
+            <Nombre>Laura</Nombre>
+            <Asignaturas>
+                <Asignatura>
+                    <Siglas>FOL</Siglas>
+                    <Nombre>Formación y Orientación Laboral</Nombre>
+                    <NotaEsperada>8.0</NotaEsperada>
+                </Asignatura>
+            </Asignaturas>
+        </Profesor>
+    </Profesores>
+</Curso>

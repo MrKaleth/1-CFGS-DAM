@@ -1,0 +1,11 @@
+<!ELEMENT viaje (cliente, destinos)>
+<!ELEMENT cliente (nombre, fecha_inicio, fecha_fin, origen)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT fecha_inicio (#PCDATA)>
+<!ELEMENT fecha_fin (#PCDATA)>
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT destinos (destino+)>
+<!ELEMENT destino (ciudad, hotel, noches)>
+<!ELEMENT ciudad (#PCDATA)>
+<!ELEMENT hotel (#PCDATA)>
+<!ELEMENT noches (#PCDATA)>
