@@ -1,4 +1,4 @@
-package boletin1.Ejercicio2;
+package boletin1;
 
 public class Ejercicio2 {
 	public static void main(String[] args) {
