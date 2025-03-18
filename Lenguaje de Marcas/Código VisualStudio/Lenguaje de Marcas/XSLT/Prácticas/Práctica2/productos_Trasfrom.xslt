@@ -8,23 +8,38 @@
             <head>
                 <title>Reporte de Productos - Agrupados por Categoría (XSLT 2.0)</title>
                 <style>
-                    body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
-                    table { width: 60%; margin: auto; border-collapse: collapse; margin-bottom: 20px; }
-                    th, td { border: 1px solid black; padding: 8px; text-align: center; }
-                    th { background-color: #f2f2f2; }
-                    .rojo { color: red; font-weight: bold; }
-                    .verde { color: green; font-weight: bold; }
-                    .categoria { font-size: 22px; font-weight: bold; margin-top: 20px; text-align: center; }
-                    .titulo { font-size: 24px; font-weight: bold; margin-bottom: 20px; }
-                    .resumen { font-size: 18px; font-weight: bold; margin-top: 10px; }
-                    .final { font-size: 20px; font-weight: bold; margin-top: 30px; }
+                    body {
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+                
+                    table {
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+
+                    th, td {
+                        border: 1px solid #ccc;
+                        padding: 12px;
+                        text-align: center;
+                    }
+
+                    .rojo { 
+                        color: red; 
+                        font-weight: bold; 
+                    }
+
+                    .verde { 
+                        color: green; 
+                        font-weight: bold; 
+                    }
+                    
                 </style>
             </head>
             <body>
-                <div class="titulo">Reporte de Productos Agrupados por Categoría (XSLT 2.0)</div>
+                <h1>Reporte de Productos Agrupados por Categoría (XSLT 2.0)</h1>
 
                 <xsl:for-each-group select="productos/producto" group-by="categoria">
-                    <div class="categoria">Categoría: <xsl:value-of select="current-grouping-key()"/></div>
+                    <h2>Categoría: <xsl:value-of select="current-grouping-key()"/></h2>
                     
                     <table>
                         <tr>
@@ -33,6 +48,7 @@
                             <th>Precio</th>
                             <th>Stock</th>
                         </tr>
+                        
                         <xsl:for-each select="current-group()">
                             <xsl:sort select="precio" data-type="number" order="ascending"/>
                             <tr>
@@ -54,17 +70,15 @@
                                 <td><xsl:value-of select="stock"/></td>
                             </tr>
                         </xsl:for-each>
+                        <td colspan="4">
+                        <i>Total productos: <xsl:value-of select="count(current-group())"/> | 
+                        Stock total: <xsl:value-of select="sum(current-group()/stock)"/></i>
+                        </td>
                     </table>
-                    
-                    <div class="resumen">
-                        Total productos: <xsl:value-of select="count(current-group())"/> | 
-                        Stock total: <xsl:value-of select="sum(current-group()/stock)"/>
-                    </div>
                 </xsl:for-each-group>
 
-                <div class="final">Fin del reporte</div>
+                <p>Fin del reporte</p>
             </body>
         </html>
     </xsl:template>
-
 </xsl:stylesheet>

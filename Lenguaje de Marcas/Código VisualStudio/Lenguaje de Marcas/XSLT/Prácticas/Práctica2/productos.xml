@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="productos_Trasform.xsl"?>
+<productos>
+  <producto id="1">
+    <nombre>Smartphone X</nombre>
+    <categoria>Electrónica</categoria>
+    <precio>299.99</precio>
+    <stock>50</stock>
+  </producto>
+  <producto id="2">
+    <nombre>Portátil Pro</nombre>
+    <categoria>Informática</categoria>
+    <precio>899.99</precio>
+    <stock>20</stock>
+  </producto>
+  <producto id="3">
+    <nombre>Auriculares Beats</nombre>
+    <categoria>Electrónica</categoria>
+    <precio>199.99</precio>
+    <stock>30</stock>
+  </producto>
+  <producto id="4">
+    <nombre>Televisor 4K</nombre>
+    <categoria>Electrónica</categoria>
+    <precio>499.99</precio>
+    <stock>15</stock>
+  </producto>
+  <producto id="5">
+    <nombre>Tablet S</nombre>
+    <categoria>Informática</categoria>
+    <precio>399.99</precio>
+    <stock>35</stock>
+  </producto>
+  <producto id="6">
+    <nombre>Libro: Programación en Java</nombre>
+    <categoria>Libros</categoria>
+    <precio>39.99</precio>
+    <stock>100</stock>
+  </producto>
+  <producto id="7">
+    <nombre>Libro: XQuery Avanzado</nombre>
+    <categoria>Libros</categoria>
+    <precio>49.99</precio>
+    <stock>80</stock>
+  </producto>
+  <producto id="8">
+    <nombre>Ordenador de Escritorio</nombre>
+    <categoria>Informática</categoria>
+    <precio>1099.99</precio>
+    <stock>10</stock>
+  </producto>
+  <producto id="9">
+    <nombre>Cámara Digital</nombre>
+    <categoria>Electrónica</categoria>
+    <precio>549.99</precio>
+    <stock>25</stock>
+  </producto>
+  <producto id="10">
+    <nombre>Smartwatch Z</nombre>
+    <categoria>Electrónica</categoria>
+    <precio>199.99</precio>
+    <stock>45</stock>
+  </producto>
+  <producto id="11">
+    <nombre>Impresora Láser</nombre>
+    <categoria>Informática</categoria>
+    <precio>149.99</precio>
+    <stock>30</stock>
+  </producto>
+  <producto id="12">
+    <nombre>Libro: Diseño Web</nombre>
+    <categoria>Libros</categoria>
+    <precio>29.99</precio>
+    <stock>60</stock>
+  </producto>
+  <producto id="13">
+    <nombre>Consola de Juegos</nombre>
+    <categoria>Electrónica</categoria>
+    <precio>399.99</precio>
+    <stock>40</stock>
+  </producto>
+  <producto id="14">
+    <nombre>Monitor LED</nombre>
+    <categoria>Informática</categoria>
+    <precio>179.99</precio>
+    <stock>50</stock>
+  </producto>
+  <producto id="15">
+    <nombre>Libro: Redes y Comunicaciones</nombre>
+    <categoria>Libros</categoria>
+    <precio>59.99</precio>
+    <stock>75</stock>
+  </producto>
+</productos>
