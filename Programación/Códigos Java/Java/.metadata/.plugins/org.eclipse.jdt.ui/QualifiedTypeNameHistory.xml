@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.sql.Date"/>
     <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.java_lang_Class"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.lang.invoke.StringConcatException"/>
     <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
@@ -14,9 +13,15 @@
     <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="excepcionesPropias.AdrianException"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="boletin1.GestionaExcepcionesEjercicio5"/>
+    <fullyQualifiedTypeName name="proyecto.Modelo.INombre"/>
+    <fullyQualifiedTypeName name="proyecto.Modelo.Empleado"/>
+    <fullyQualifiedTypeName name="proyecto.Modelo.INomina"/>
+    <fullyQualifiedTypeName name="simulacroVehiculos.Modelo.VehiculoGeneral"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="simulacroVehiculos.Modelo.Estado"/>
 </qualifiedTypeNameHistroy>

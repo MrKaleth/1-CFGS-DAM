@@ -1,0 +1,6 @@
+package proyecto.Modelo;
+
+public enum Categoria {
+	JEFE_PROYECTO, SCRUM_MASTER, DESARROLLADOR_SENIOR, DESARROLLADOR_JUNIOR, ARQUITECTO;
+
+}

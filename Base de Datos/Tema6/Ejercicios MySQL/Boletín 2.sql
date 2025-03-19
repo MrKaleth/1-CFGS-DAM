@@ -289,3 +289,105 @@ union
 select ciudad from proyecto
 order by ciudad;
 
+-- Ejercicio 23 --
+/*Obtener todas las posibles combinaciones entre piezas y
+proveedores*/
+select proveedor.codpro, proveedor.nompro, pieza.codpie, pieza.nompie
+from proveedor
+cross join pieza;
+
+-- Ejercicio 24 --
+/*Obtener todos los posibles trios de código de proveedor,
+codigo de pieza y codigo de proyecto en los que el proveedor,
+pieza y proyecto estén en la misma ciudad*/
+select proveedor.codpro, pieza.codpie, proyecto.codpj, proveedor.ciudad
+from proveedor
+join pieza on proveedor.ciudad = pieza.ciudad
+join proyecto on proveedor.ciudad = proyecto.ciudad;
+
+-- Ejercicio 25 --
+/*Obtener los códigos de proveedor, de pieza y de proyecto
+de aquellos cargamentos en los que proveedor, pieza y proyecto
+esten en la misma ciudad*/
+select ventas.codpro, ventas.codpie, ventas.codpj, proveedor.ciudad
+from ventas
+join proveedor on ventas.codpro = proveedor.codpro
+join pieza on ventas.codpie = pieza.codpie
+join proyecto on ventas.codpj = proyecto.codpj
+where proveedor.ciudad = pieza.ciudad
+and proveedor.ciudad = proyecto.ciudad;
+
+-- Ejercicio 26 --
+/*Obtener todos los posibles tríos de código de proveedor, 
+código de pieza y código de proyecto en los que el proveedor, 
+pieza y proyecto no estén todos en la misma ciudad.*/
+select proveedor.codpro, pieza.codpie, proyecto.codpj, 
+       proveedor.ciudad as ciudad_proveedor, 
+       pieza.ciudad as ciudad_pieza, 
+       proyecto.ciudad as ciudad_proyecto
+from proveedor
+join pieza on proveedor.codpro is not null  
+join proyecto on proveedor.codpro is not null 
+where proveedor.ciudad != pieza.ciudad 
+   or proveedor.ciudad != proyecto.ciudad 
+   or pieza.ciudad != proyecto.ciudad;
+
+-- Ejercicio 27 --
+/*Obtener todos los posibles tríos de código de proveedor, 
+código de pieza y código de proyecto en los que el proveedor, 
+pieza y proyecto no están ninguno en la misma ciudad*/
+select proveedor.codpro, pieza.codpie, proyecto.codpj, 
+       proveedor.ciudad as ciudad_proveedor, 
+       pieza.ciudad as ciudad_pieza, 
+       proyecto.ciudad as ciudad_proyecto
+from proveedor
+join pieza on proveedor.codpro is not null 
+join proyecto on proveedor.codpro is not null  
+where proveedor.ciudad != pieza.ciudad 
+   and proveedor.ciudad != proyecto.ciudad 
+   and pieza.ciudad != proyecto.ciudad;
+
+-- Ejercicio 28 --
+/*Obtener los códigos de las piezas suministradas por 
+proveedores de Londres.*/
+select distinct ventas.codpie, proveedor.ciudad
+from ventas
+join proveedor on ventas.codpro = proveedor.codpro
+where proveedor.ciudad = 'Londres';
+
+-- Ejercicio 29 --
+/*Obtener los códigos de las piezas suministradas por 
+proveedores de Londres a proyectos en Londres.*/
+select distinct ventas.codpie, 
+proveedor.ciudad as ciudad_proveedor, 
+proyecto.ciudad as ciudad_proyecto
+from ventas
+join proveedor on ventas.codpro = proveedor.codpro
+join proyecto on ventas.codpj = proyecto.codpj
+where proveedor.ciudad = 'Londres'
+and proyecto.ciudad = 'Londres';
+ 
+-- Ejercicio 30 --
+/*Obtener todos los pares de nombres de ciudades en las que un 
+proveedor de la primera sirva a un proyecto de la segunda.*/
+select distinct proveedor.ciudad as ciudad_proveedor, 
+                proyecto.ciudad as ciudad_proyecto
+from ventas
+join proveedor on ventas.codpro = proveedor.codpro
+join proyecto on ventas.codpj = proyecto.codpj
+where proveedor.ciudad != proyecto.ciudad;
+
+-- Ejercicio 31 --
+/* Obtener códigos de piezas que sean suministradas a un 
+proyecto por un proveedor de la misma ciudad del proyecto.*/
+select distinct ventas.codpie
+from ventas
+join proveedor on ventas.codpro = proveedor.codpro
+join proyecto on ventas.codpj = proyecto.codpj
+where proveedor.ciudad = proyecto.ciudad;
+
+
+
+
+
+
