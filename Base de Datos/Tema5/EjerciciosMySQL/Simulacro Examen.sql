@@ -28,6 +28,9 @@ where saldo > 10000;
 select * from vista_Saldo;
 
 -- Ejercicio 4 --
+-- 4. Muestra los DNI de los Jefes de Departamento
+CREATE VIEW jefes AS (
+ SELECT DISTINCT jefe FROM empleados);
 
 -- Ejercicio 5 --
 /*Muestra un listado con el nombre y los apellidos de los clientes 
@@ -54,3 +57,15 @@ select * from vista_cliente_Cod_Corto;
 select * from banco.vista_Saldo;
 select * from banco.vista_clientes_cuentas;
 */
+
+
+SET SESSION group_concat_max_len = 100000; 
+
+SELECT CONCAT('DROP VIEW IF EXISTS ', GROUP_CONCAT(TABLE_NAME SEPARATOR ', '), ';') 
+INTO @drop_views 
+FROM INFORMATION_SCHEMA.VIEWS 
+WHERE TABLE_SCHEMA = DATABASE();
+
+PREPARE stmt FROM @drop_views;
+EXECUTE stmt;
+DEALLOCATE PREPARE stmt;
