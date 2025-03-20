@@ -2,5 +2,5 @@ package simulacroVehiculos.Modelo;
 
 public abstract class VehiculoGeneral {
 private String id;
-private 
+private Alquiler [] alquileres;
 }
