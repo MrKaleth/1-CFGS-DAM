@@ -14,14 +14,20 @@
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
     <fullyQualifiedTypeName name="excepcionesPropias.AdrianException"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="boletin1.GestionaExcepcionesEjercicio5"/>
     <fullyQualifiedTypeName name="proyecto.Modelo.INombre"/>
     <fullyQualifiedTypeName name="proyecto.Modelo.Empleado"/>
     <fullyQualifiedTypeName name="proyecto.Modelo.INomina"/>
     <fullyQualifiedTypeName name="simulacroVehiculos.Modelo.VehiculoGeneral"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="simulacroVehiculos.Modelo.Estado"/>
+    <fullyQualifiedTypeName name="simulacroVehiculos.Modelo.Alquiler"/>
+    <fullyQualifiedTypeName name="competicion.Modelo.Estado_Prueba"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="competicion.Modelo.ICompeticion"/>
+    <fullyQualifiedTypeName name="competicion.Modelo.Deportista"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="competicion.Modelo.Prueba"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="competicion.Modelo.CompeticionException"/>
 </qualifiedTypeNameHistroy>
