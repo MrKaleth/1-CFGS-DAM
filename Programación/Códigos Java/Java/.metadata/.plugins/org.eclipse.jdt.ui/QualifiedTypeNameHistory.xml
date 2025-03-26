@@ -8,7 +8,6 @@
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="ejemplo.Abstracto.Ejemplo2"/>
     <fullyQualifiedTypeName name="ejemplo.Abstracto.GeneraExcepcion"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="double"/>
     <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
@@ -27,11 +26,9 @@
     <fullyQualifiedTypeName name="competicion.Modelo.Deportista"/>
     <fullyQualifiedTypeName name="competicion.Modelo.Prueba"/>
     <fullyQualifiedTypeName name="competicion.Modelo.CompeticionException"/>
-    <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="pilotos.Modelo.EstadoVuelo"/>
     <fullyQualifiedTypeName name="pilotos.Modelo.IVuelo"/>
     <fullyQualifiedTypeName name="pilotos.Modelo.VueloException"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="transportes.Modelo.IRuta"/>
     <fullyQualifiedTypeName name="transportes.Modelo.TipoVuelo"/>
     <fullyQualifiedTypeName name="transportes.Modelo.Ciudad"/>
@@ -46,4 +43,14 @@
     <fullyQualifiedTypeName name="miembros.Modelo.MiembroEstandar"/>
     <fullyQualifiedTypeName name="miembros.Modelo.MiembroPremium"/>
     <fullyQualifiedTypeName name="miembros.Modelo.MiembroBase"/>
+    <fullyQualifiedTypeName name="gestionBiblioteca.Controlador.GestionaBiblioteca"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="gestionBiblioteca.Modelo.Biblioteca"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="gestionBiblioteca.Modelo.Libro"/>
+    <fullyQualifiedTypeName name="gestionBiblioteca.Modelo.EstadoLibro"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

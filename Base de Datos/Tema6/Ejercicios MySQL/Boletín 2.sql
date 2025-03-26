@@ -390,12 +390,104 @@ where proveedor.ciudad = proyecto.ciudad;
 /*Obtener códigos de proyectos que sean suministrados por un 
 proveedor de una ciudad distinta a la del proyecto. Visualizar
 el código de proveedor y el del proyecto*/
-select distinct ventas.codpie, ventas.codpro
+select distinct ventas.codpro, ventas.codpj
 from ventas
 join proveedor on ventas.codpro = proveedor.codpro
 join proyecto on ventas.codpj = proyecto.codpj
 where proveedor.ciudad != proyecto.ciudad;
 
+-- Ejercicio 33 --
+/*Obtener todos los pares de códigos de piezas suministradas por el mismo
+proveedor*/
+select v1.codpie as pieza1, 
+v2.codpie as pieza2, 
+v1.codpro as proveedor
+from ventas v1
+join ventas v2 on v1.codpro = v2.codpro and v1.codpie < v2.codpie
+order by v1.codpro, v1.codpie, v2.codpie;
 
+-- Ejercicio 34 --
+/*Obtener todos los pares distintos de códigos de piezas suministradas por el mismo
+proveedor*/
+select distinct v1.codpie as pieza1, 
+v2.codpie as pieza2, 
+v1.codpro as proveedor
+from ventas v1
+join ventas v2 on v1.codpro = v2.codpro and v1.codpie < v2.codpie
+order by v1.codpro, v1.codpie, v2.codpie;
 
+-- Ejercicio 35 --
+/*Obtener para cada pieza suministrada a un proyecto, el código de pieza,
+el código de proyecto y la cantidad total correspondiente.*/
+select codpie, codpj, sum(cantidad) as cantidad_total
+from ventas
+group by codpie, codpj
+order by codpie, codpj;
 
+-- Ejercicio 36 --
+/*Obtener los códigos de proyectos y los códigos de piezas en los que la
+cantidad media suministrada a algún proyecto sea superior a 320*/
+select v.codpj, v.codpie
+from (
+    select codpj, codpie, sum(cantidad) / count(*) as cantidad_media
+    from ventas
+    group by codpj, codpie
+) as v
+join proyecto p on v.codpj = p.codpj and v.cantidad_media > 320;
+
+-- Ejercicio 37 --
+/*Obtener un listado ascendente de los nombres de todos los proveedores que hayan
+suministrado una cantidad superior a 100 de la pieza p1. Los nombres deben
+aparecer en mayúsculas.*/
+select distinct upper(proveedor.nompro) as nombre_proveedor
+from ventas
+join proveedor on ventas.codpro = proveedor.codpro
+where ventas.codpie = "p1" and ventas.cantidad > 100
+order by nombre_proveedor asc;
+
+-- Ejercicio 38 --
+/*Obtener los nombres de los proyectos a los que suministra s1*/
+select distinct proyecto.nompj  
+from ventas  
+join proyecto on ventas.codpj = proyecto.codpj  
+where ventas.codpro = 'S1';  
+
+-- Ejercicio 39 --
+/*Obtener los colores de las piezas suministradas por s1.*/
+select distinct pieza.color
+from ventas
+join pieza on ventas.codpie = pieza.codpie
+where ventas.codpro = 'S1';
+
+-- Ejercicio 40 --
+/*Obtener los códigos de las piezas suministradas a cualquier proyecto de Londres*/
+select ventas.codpie, proyecto.ciudad
+from ventas
+join proyecto on ventas.codpj = proyecto.codpj
+where proyecto.ciudad = 'Londres';
+
+-- Ejercicio 41 --
+/*Obtener los códigos de los proveedores con status menor que el proveedor con
+código s1.*/
+select proveedor.codpro as codiguito
+from proveedor
+where status < (
+select proveedor.status 
+from proveedor 
+where proveedor.codpro = 'S1'
+); 
+
+-- Ejercicio 42 --
+/*Obtener los códigos de los proyectos que usen la pieza p1 en una cantidad media mayor
+que la mayor cantidad en la que cualquier pieza sea suministrada al proyecto J1*/
+select v1.codpj
+from ventas v1
+where v1.codpie = 'P1' and (
+select avg(v2.cantidad)
+from ventas v2
+where v2.codpj = v1.codpj and v2.codpie = 'P1')
+>
+(select max(ventas.cantidad)
+from ventas
+where ventas.codpj = 'J1'
+);
