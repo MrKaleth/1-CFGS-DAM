@@ -378,7 +378,7 @@ join proyecto on ventas.codpj = proyecto.codpj
 where proveedor.ciudad != proyecto.ciudad;
 
 -- Ejercicio 31 --
-/* Obtener códigos de piezas que sean suministradas a un 
+/*Obtener códigos de piezas que sean suministradas a un 
 proyecto por un proveedor de la misma ciudad del proyecto.*/
 select distinct ventas.codpie
 from ventas
@@ -386,7 +386,15 @@ join proveedor on ventas.codpro = proveedor.codpro
 join proyecto on ventas.codpj = proyecto.codpj
 where proveedor.ciudad = proyecto.ciudad;
 
-
+-- Ejercicio 32 --
+/*Obtener códigos de proyectos que sean suministrados por un 
+proveedor de una ciudad distinta a la del proyecto. Visualizar
+el código de proveedor y el del proyecto*/
+select distinct ventas.codpie, ventas.codpro
+from ventas
+join proveedor on ventas.codpro = proveedor.codpro
+join proyecto on ventas.codpj = proyecto.codpj
+where proveedor.ciudad != proyecto.ciudad;
 
 
 

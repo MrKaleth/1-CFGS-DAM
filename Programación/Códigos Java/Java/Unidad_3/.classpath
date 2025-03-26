@@ -12,5 +12,6 @@
 	<classpathentry kind="src" path="Examen"/>
 	<classpathentry kind="src" path="Herencias__Abstracto_Interfaces"/>
 	<classpathentry kind="src" path="Excepciones"/>
+	<classpathentry kind="src" path="Examen2"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
