@@ -15,148 +15,58 @@ public class GestionaBiblioteca {
 		Biblioteca b = new Biblioteca(listaLibrosBiblioteca);
 		boolean salir = false;
 		while (!salir) {
-			int opcion = f.menu();
+			int opcion = f.menu(input);
 
 			switch (opcion) {
 			case 1: {
-				System.out.println();
-				System.out.println("Agregando un libro nuevo al inventario...");
-				System.out.println("Introduce los datos del libro.");
-				System.out.println("Introduce título. ");
-				String titulo = input.nextLine();
-				System.out.println("Introduce nombre. ");
-				String nombre = input.nextLine();
-				System.out.println("Introduce género. ");
-				String genero = input.nextLine();
-				System.out.println("Introduce año. ");
-				int anyo = input.nextInt();
-
-				input.nextLine();
-
-				Libro l = new Libro(titulo, nombre, genero, anyo, EstadoLibro.LIBRE);
-				b.anyadirLibro(l);
-				System.out.println("Libro añadido de forma exitosa.");
-				System.out.println();
+				f.agregaLibro(b);
 				break;
 			}
 
 			case 2: {
-				System.out.println("Introduce el título del libro que quieres prestar: ");
-				String titulo = input.nextLine();
 
-				Libro libro = b.buscarLibro(titulo);
+				f.prestar(b);
 
-				if (libro != null) {
-					boolean prestado = libro.prestarLibro();
-
-					if (prestado) {
-						System.out.println("Libro prestado con éxito.");
-					} else {
-						System.out.println("No se pudo prestar el libro.");
-					}
-				} else {
-					System.out.println("El libro no se encuentra en la biblioteca.");
-				}
-				System.out.println();
 				break;
 			}
 
 			case 3: {
-				System.out.println("Introduce el título del libro que quieres devolver: ");
-				String titulo = input.nextLine();
 
-				Libro libro = b.buscarLibro(titulo);
+				f.devolver(b);
 
-				if (libro != null) {
-					boolean devuelto = libro.devolverLibro();
-
-					if (devuelto) {
-						System.out.println("Libro devuelto con éxito.");
-					} else {
-						System.out.println("No se pudo devolver el libro.");
-					}
-				} else {
-					System.out.println("El libro no se encuentra en la biblioteca.");
-				}
-				System.out.println();
 				break;
 			}
 
 			case 4: {
-				System.out.println("Mostrando lista de libros de la biblioteca: ");
-				System.out.println(b);
-				System.out.println();
+				f.mostrar(b);
 				break;
 			}
 
 			case 5: {
-				System.out.println("Introduce el título del libro del que quieres saber su información: ");
-				String titulo = input.nextLine();
-
-				Libro libro = b.buscarLibro(titulo);
-				if (libro != null) {
-					System.out.println(libro);
-				} else {
-					System.out.println("El libro no se encuentra en la biblioteca.");
-				}
-
-				System.out.println();
+				f.infoLibro(input, b);
 				break;
 			}
 
 			case 6: {
-				System.out.println("¿Deseas buscar libro por título o por autor?");
-				String busqueda = input.nextLine().toLowerCase();
-
-				if (busqueda.equals("titulo")) {
-					System.out.println("Introduce el título del libro: ");
-					String titulo = input.nextLine();
-					Libro libroEncontrado = b.buscarLibro(titulo);
-
-					if (libroEncontrado != null) {
-						System.out.println(libroEncontrado);
-
-					} else {
-						System.out.println("No se encontró ningún libro con ese título.");
-					}
-				}
-
-				else if (busqueda.equals("autor")) {
-					System.out.println("Introduce el autor del libro: ");
-					String autor = input.nextLine();
-					List<Libro> librosEncontrados = b.buscarLibroAutor(autor);
-
-					if (!librosEncontrados.isEmpty()) {
-						for (Libro libro : librosEncontrados) {
-							System.out.println(libro);
-						}
-
-					} else {
-						System.out.println("No se encontraron libros de ese autor.");
-					}
-
-				} else {
-					System.out.println("Opción inválida. Debes escribir 'titulo' o 'autor'.");
-				}
+				f.busquedaLibro(input, b);
 				break;
 			}
-			
+
 			case 7: {
-				System.out.println("Saliendo del programa...");
-				salir = true;
+				salir = f.salirPrograma();
 				break;
 			}
 
 			default:
-				throw new IllegalArgumentException("Valor inesperado " + opcion);
+				System.out.println("Valor inexperado: " + opcion + ". Por favor, ingrese opción nuevamente.");
+				System.out.println();
 			}
 		}
 
 		input.close();
 	}
 
-	int menu() {
-		Scanner input = new Scanner(System.in);
+	int menu(Scanner input) {
 		int opcion;
 		System.out.println("--- Menu ---");
 		System.out.println("1. Agregar un nuevo libro al inventario.");
@@ -171,5 +81,117 @@ public class GestionaBiblioteca {
 		opcion = input.nextInt();
 		return opcion;
 
+	}
+
+	void agregaLibro(Biblioteca b) {
+		Scanner input = new Scanner(System.in);
+		System.out.println();
+		System.out.println("Agregando un libro nuevo al inventario...");
+		System.out.println("Introduce los datos del libro.");
+		System.out.println("Introduce título. ");
+		String titulo = input.nextLine();
+		System.out.println("Introduce nombre. ");
+		String nombre = input.nextLine();
+		System.out.println("Introduce género. ");
+		String genero = input.nextLine();
+		System.out.println("Introduce año. ");
+		int anyo = input.nextInt();
+
+		input.nextLine();
+
+		Libro l = new Libro(titulo, nombre, genero, anyo, EstadoLibro.LIBRE);
+		b.anyadirLibro(l);
+		System.out.println("Libro añadido de forma exitosa.");
+		System.out.println();
+	}
+
+	void prestar(Biblioteca b) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Introduce el título del libro que quieres prestar: ");
+		String titulo = input.nextLine();
+
+		Libro libro = b.buscarLibro(titulo);
+		try {
+			boolean prestado = b.prestarLibro(libro);
+
+		} catch (BibliotecaException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	void devolver(Biblioteca b) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Introduce el título del libro que quieres devolver: ");
+		String titulo = input.nextLine();
+
+		Libro libro = b.buscarLibro(titulo);
+
+		try {
+			boolean devuelto = b.devolverLibro(libro);
+		} catch (BibliotecaException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+
+	void mostrar(Biblioteca b) {
+		System.out.println("Mostrando lista de libros de la biblioteca: ");
+		System.out.println(b);
+		System.out.println();
+	}
+
+	void infoLibro(Scanner input, Biblioteca b) {
+		System.out.println("Introduce el título del libro del que quieres saber su información: ");
+		String titulo = input.nextLine();
+
+		Libro libro = b.buscarLibro(titulo);
+		if (libro != null) {
+			System.out.println(libro);
+		} else {
+			System.out.println("El libro no se encuentra en la biblioteca.");
+		}
+
+		System.out.println();
+	}
+
+	void busquedaLibro(Scanner input, Biblioteca b) {
+		System.out.println("¿Deseas buscar libro por título o por autor?");
+		String busqueda = input.nextLine().toLowerCase();
+
+		if (busqueda.equals("titulo")) {
+			System.out.println("Introduce el título del libro: ");
+			String titulo = input.nextLine();
+			Libro libroEncontrado = b.buscarLibro(titulo);
+
+			if (libroEncontrado != null) {
+				System.out.println(libroEncontrado);
+
+			} else {
+				System.out.println("No se encontró ningún libro con ese título.");
+			}
+		}
+
+		else if (busqueda.equals("autor")) {
+			System.out.println("Introduce el autor del libro: ");
+			String autor = input.nextLine();
+			List<Libro> librosEncontrados = b.buscarLibroAutor(autor);
+
+			if (!librosEncontrados.isEmpty()) {
+				for (Libro libro : librosEncontrados) {
+					System.out.println(libro);
+				}
+
+			} else {
+				System.out.println("No se encontraron libros de ese autor.");
+			}
+
+		} else {
+			System.out.println("Opción inválida. Debes escribir 'titulo' o 'autor'.");
+		}
+	}
+
+	boolean salirPrograma() {
+		System.out.println();
+		System.out.println("Saliendo del programa...");
+		return true;
 	}
 }

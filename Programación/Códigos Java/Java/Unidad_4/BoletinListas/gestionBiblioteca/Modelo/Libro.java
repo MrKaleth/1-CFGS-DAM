@@ -83,32 +83,4 @@ public class Libro {
 				+ anyoPublicacion + ", estado=" + estado + "]";
 	}
 
-	public boolean prestarLibro() {
-		boolean prestado;
-		if (this.estado != EstadoLibro.PRESTADO) {
-			this.estado = EstadoLibro.PRESTADO;
-			System.out.println("El libro \"" + titulo + "\" ha sido prestado.");
-			prestado = true;
-		} else {
-			System.out.println("El libro \"" + titulo + "\" ya está prestado.");
-			prestado = false;
-		}
-
-		return prestado;
-	}
-
-	public boolean devolverLibro() {
-		boolean devuelto;
-		if (this.estado != EstadoLibro.LIBRE) {
-			this.estado = EstadoLibro.LIBRE;
-			System.out.println("El libro \"" + titulo + "\" ha sido devuelto.");
-			devuelto = true;
-		} else {
-			System.out.println("El libro \"" + titulo + "\" ya ha sido devuelto..");
-			devuelto = false;
-		}
-
-		return devuelto;
-	}
-
 }

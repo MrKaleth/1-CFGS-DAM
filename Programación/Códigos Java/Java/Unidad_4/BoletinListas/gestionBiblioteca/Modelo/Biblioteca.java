@@ -2,8 +2,6 @@ package gestionBiblioteca.Modelo;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-
 public class Biblioteca {
 	private List<Libro> listaLibros;
 
@@ -18,23 +16,6 @@ public class Biblioteca {
 
 	protected void setListaLibros(List<Libro> listaLibros) {
 		this.listaLibros = listaLibros;
-	}
-
-	@Override
-	public int hashCode() {
-		return Objects.hash(listaLibros);
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Biblioteca other = (Biblioteca) obj;
-		return Objects.equals(listaLibros, other.listaLibros);
 	}
 
 	@Override
@@ -64,6 +45,33 @@ public class Biblioteca {
 	        }
 	    }
 	    return librosEncontrados;
+	}
+	
+	public boolean prestarLibro(Libro l) throws BibliotecaException{
+		boolean prestado;
+		if (l.getEstado() != EstadoLibro.PRESTADO) {
+			l.setEstado(EstadoLibro.PRESTADO);
+			System.out.println("El libro \"" + l.getTitulo() + "\" ha sido prestado.");
+			prestado = true;
+		} else {
+			throw new BibliotecaException("El libro \"" + l.getTitulo() + "\" ya está prestado.");
+		}
+
+		return prestado;
+	}
+
+	public boolean devolverLibro(Libro l) throws BibliotecaException {
+		boolean devuelto;
+		if (l.getEstado() != EstadoLibro.LIBRE) {
+			l.setEstado(EstadoLibro.LIBRE);
+			System.out.println("El libro \"" + l.getTitulo() + "\" ha sido devuelto.");
+			devuelto = true;
+		} else {
+			throw new BibliotecaException("El libro \"" + l.getTitulo() + "\" ya ha sido devuelto..");
+
+		}
+
+		return devuelto;
 	}
 
 }
