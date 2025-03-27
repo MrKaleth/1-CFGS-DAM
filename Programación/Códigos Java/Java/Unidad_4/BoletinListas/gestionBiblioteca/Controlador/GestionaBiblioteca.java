@@ -1,7 +1,7 @@
 package gestionBiblioteca.Controlador;
 
 import gestionBiblioteca.Modelo.*;
-import gestionBiblioteca.Repositorio.Biblioteca;
+import gestionBiblioteca.Repositorio.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -97,10 +97,11 @@ public class GestionaBiblioteca {
 		String genero = input.nextLine();
 		System.out.println("Introduce año. ");
 		int anyo = input.nextInt();
-
 		input.nextLine();
+		System.out.println("Introduce ISBN. ");
+		String isbn = input.nextLine();
 
-		Libro l = new Libro(titulo, nombre, genero, anyo, EstadoLibro.LIBRE);
+		Libro l = new Libro(titulo, nombre, genero, anyo, EstadoLibro.LIBRE, isbn);
 		b.anyadirLibro(l);
 		System.out.println("Libro añadido de forma exitosa.");
 		System.out.println();

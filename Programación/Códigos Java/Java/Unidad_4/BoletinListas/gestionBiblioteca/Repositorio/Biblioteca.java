@@ -2,10 +2,10 @@ package gestionBiblioteca.Repositorio;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import gestionBiblioteca.Modelo.BibliotecaException;
 import gestionBiblioteca.Modelo.EstadoLibro;
 import gestionBiblioteca.Modelo.Libro;
+
 public class Biblioteca {
 	private List<Libro> listaLibros;
 
@@ -42,20 +42,20 @@ public class Biblioteca {
 	}
 
 	public List<Libro> buscarLibroAutor(String autor) {
-	    List<Libro> librosEncontrados = new ArrayList<>();
-	    for (Libro libro : listaLibros) {
-	        if (libro.obtenerAutor().equalsIgnoreCase(autor)) {
-	            librosEncontrados.add(libro);
-	        }
-	    }
-	    return librosEncontrados;
+		List<Libro> librosEncontrados = new ArrayList<>();
+		for (Libro libro : listaLibros) {
+			if (libro.obtenerAutor().equalsIgnoreCase(autor)) {
+				librosEncontrados.add(libro);
+			}
+		}
+		return librosEncontrados;
 	}
-	
-	public void prestarLibro(Libro l) throws BibliotecaException{
+
+	public void prestarLibro(Libro l) throws BibliotecaException {
 		if (l.obtenerEstado() != EstadoLibro.PRESTADO) {
 			l.cambiarEstado(EstadoLibro.PRESTADO);
 			System.out.println("El libro \"" + l.obtenerTitulo() + "\" ha sido prestado.");
-		
+
 		} else {
 			throw new BibliotecaException("El libro \"" + l.obtenerTitulo() + "\" ya está prestado.");
 		}
