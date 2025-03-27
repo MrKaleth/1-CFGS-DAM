@@ -1,6 +1,7 @@
 package gestionBiblioteca.Controlador;
 
 import gestionBiblioteca.Modelo.*;
+import gestionBiblioteca.Repositorio.Biblioteca;
 
 import java.util.ArrayList;
 import java.util.List;

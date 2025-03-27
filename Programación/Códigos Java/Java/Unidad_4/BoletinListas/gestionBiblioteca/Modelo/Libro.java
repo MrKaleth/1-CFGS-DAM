@@ -83,4 +83,29 @@ public class Libro {
 				+ anyoPublicacion + ", estado=" + estado + "]";
 	}
 
+	public String obtenerTitulo() {
+		return titulo;
+	}
+
+	public String obtenerAutor() {
+		return autor;
+
+	}
+
+	public String obtenerGenero() {
+		return genero;
+	}
+
+	public int obtenerAnyo() {
+		return anyoPublicacion;
+	}
+	
+	public EstadoLibro obtenerEstado() {
+		return estado;
+	}
+	
+	public void cambiarEstado(EstadoLibro e) {
+		setEstado(e);
+	}
+
 }
