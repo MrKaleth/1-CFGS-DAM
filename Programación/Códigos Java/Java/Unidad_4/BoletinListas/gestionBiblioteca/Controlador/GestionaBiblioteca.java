@@ -43,12 +43,12 @@ public class GestionaBiblioteca {
 			}
 
 			case 5: {
-				f.infoLibro(input, b);
+				f.infoLibro(b);
 				break;
 			}
 
 			case 6: {
-				f.busquedaLibro(input, b);
+				f.busquedaLibro(b);
 				break;
 			}
 
@@ -112,7 +112,7 @@ public class GestionaBiblioteca {
 
 		Libro libro = b.buscarLibro(titulo);
 		try {
-			boolean prestado = b.prestarLibro(libro);
+			b.prestarLibro(libro);
 
 		} catch (BibliotecaException e) {
 			System.out.println(e.getMessage());
@@ -127,7 +127,7 @@ public class GestionaBiblioteca {
 		Libro libro = b.buscarLibro(titulo);
 
 		try {
-			boolean devuelto = b.devolverLibro(libro);
+			b.devolverLibro(libro);
 		} catch (BibliotecaException e) {
 			System.out.println(e.getMessage());
 		}
@@ -139,7 +139,8 @@ public class GestionaBiblioteca {
 		System.out.println();
 	}
 
-	void infoLibro(Scanner input, Biblioteca b) {
+	void infoLibro(Biblioteca b) {
+		Scanner input = new Scanner(System.in);
 		System.out.println("Introduce el título del libro del que quieres saber su información: ");
 		String titulo = input.nextLine();
 
@@ -153,7 +154,8 @@ public class GestionaBiblioteca {
 		System.out.println();
 	}
 
-	void busquedaLibro(Scanner input, Biblioteca b) {
+	void busquedaLibro(Biblioteca b) {
+		Scanner input = new Scanner(System.in);
 		System.out.println("¿Deseas buscar libro por título o por autor?");
 		String busqueda = input.nextLine().toLowerCase();
 

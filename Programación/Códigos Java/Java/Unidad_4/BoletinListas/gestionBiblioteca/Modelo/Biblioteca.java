@@ -47,31 +47,26 @@ public class Biblioteca {
 	    return librosEncontrados;
 	}
 	
-	public boolean prestarLibro(Libro l) throws BibliotecaException{
-		boolean prestado;
+	public void prestarLibro(Libro l) throws BibliotecaException{
 		if (l.getEstado() != EstadoLibro.PRESTADO) {
 			l.setEstado(EstadoLibro.PRESTADO);
 			System.out.println("El libro \"" + l.getTitulo() + "\" ha sido prestado.");
-			prestado = true;
+		
 		} else {
 			throw new BibliotecaException("El libro \"" + l.getTitulo() + "\" ya está prestado.");
 		}
 
-		return prestado;
 	}
 
-	public boolean devolverLibro(Libro l) throws BibliotecaException {
-		boolean devuelto;
+	public void devolverLibro(Libro l) throws BibliotecaException {
 		if (l.getEstado() != EstadoLibro.LIBRE) {
 			l.setEstado(EstadoLibro.LIBRE);
 			System.out.println("El libro \"" + l.getTitulo() + "\" ha sido devuelto.");
-			devuelto = true;
 		} else {
 			throw new BibliotecaException("El libro \"" + l.getTitulo() + "\" ya ha sido devuelto..");
 
 		}
 
-		return devuelto;
 	}
 
 }
