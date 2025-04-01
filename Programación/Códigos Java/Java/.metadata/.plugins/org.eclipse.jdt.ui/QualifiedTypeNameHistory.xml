@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.sql.Date"/>
-    <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.java_lang_Class"/>
     <fullyQualifiedTypeName name="java.lang.invoke.StringConcatException"/>
     <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
@@ -45,15 +43,21 @@
     <fullyQualifiedTypeName name="gestionBiblioteca.Controlador.GestionaBiblioteca"/>
     <fullyQualifiedTypeName name="gestionBiblioteca.Modelo.Biblioteca"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
-    <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="gestionBiblioteca.Modelo.BibliotecaException"/>
     <fullyQualifiedTypeName name="gestionBiblioteca.Modelo.EstadoLibro"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="gestionBiblioteca.Modelo.Prestamo"/>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="gestionBiblioteca.Modelo.Libro"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="gestionBiblioteca.Modelo.Prestamo"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="ejemploDuplicadosEnLista.ListaProvincias"/>
+    <fullyQualifiedTypeName name="ejemploDuplicadosEnLista.ProvinciaRepetidaException"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="ejemploDuplicadosEnLista.Provincia"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="gestionEquipos.Modelo.Alumno"/>
 </qualifiedTypeNameHistroy>
