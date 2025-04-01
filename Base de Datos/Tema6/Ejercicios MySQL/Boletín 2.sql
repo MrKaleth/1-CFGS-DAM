@@ -427,13 +427,19 @@ order by codpie, codpj;
 -- Ejercicio 36 --
 /*Obtener los códigos de proyectos y los códigos de piezas en los que la
 cantidad media suministrada a algún proyecto sea superior a 320*/
-select v.codpj, v.codpie
+select v.codpj, v.codpie, v.cantidad_media
 from (
     select codpj, codpie, sum(cantidad) / count(*) as cantidad_media
     from ventas
     group by codpj, codpie
 ) as v
 join proyecto p on v.codpj = p.codpj and v.cantidad_media > 320;
+
+-- TAMBIEN SIRVE HACERLO CON HAVING --
+SELECT codpj, codpie
+FROM ventas
+GROUP BY codpj, codpie
+HAVING AVG(cantidad) > 320;
 
 -- Ejercicio 37 --
 /*Obtener un listado ascendente de los nombres de todos los proveedores que hayan
@@ -491,3 +497,80 @@ where v2.codpj = v1.codpj and v2.codpie = 'P1')
 from ventas
 where ventas.codpj = 'J1'
 );
+
+-- Ejercicio 43 --
+/*Obtener códigos de proveedores que suministren a algún proyecto la pieza p1 en
+una cantidad mayor que la cantidad media en la que se suministra la pieza p1 a
+dicho proyecto.*/
+select distinct v1.codpro
+from ventas v1
+where v1.codpie = 'P1'
+and v1.cantidad > (
+select avg(v2.cantidad)
+from ventas v2
+where v2.codpie = 'P1' and v2.codpj = v1.codpj
+);
+
+-- Ejercicio 44 --
+/*Obtener los códigos de los proyectos que usen al menos una pieza suministrada por
+s1.*/
+select distinct ventas.codpj
+from ventas
+where ventas.codpro = 'S1';
+
+-- Ejercicio 45 --
+/*Obtener los códigos de los proveedores que suministren al menos una pieza
+suministrada al menos por un proveedor que suministre al menos una pieza roja.*/
+select distinct v1.codpro
+from ventas v1
+where v1.codpie in (
+select distinct v2.codpie
+from ventas v2
+join pieza p on v2.codpie = p.codpie
+where p.color = 'Rojo'
+);
+
+-- Ejercicio 46 --
+/*Obtener los códigos de las piezas suministradas a cualquier proyecto de Londres
+usando EXISTS.*/
+select distinct ventas.codpie
+from ventas
+where exists (
+select 1 from proyecto
+where ventas.codpj = proyecto.codpj and proyecto.ciudad = 'Londres'
+);
+
+-- Ejercicio 47 --
+/*Obtener los códigos de los proyectos que usen al menos una pieza suministrada por 
+s1 usando EXISTS.*/
+select distinct v1.codpro
+from ventas v1
+where exists(
+select 1
+from ventas v2
+where v2.codpro = 'S1' and v2.codpj = v1.codpj
+);
+
+-- Ejercicio 48 --
+/*Obtener los códigos de los proyectos que no reciban ninguna pieza roja suministrada 
+por algún proveedor de Londres.*/
+select distinct proyecto.codpj
+from proyecto
+where not exists(
+select 1 from ventas
+join proveedor on ventas.codpro = proveedor.codpro
+join pieza on ventas.codpie = pieza.codpie
+where proyecto.codpj = ventas.codpj and proveedor.ciudad = 'Londres' and pieza.color = 'Rojo'
+);
+
+-- Ejercicio 49 --
+/*Obtener los códigos de los proyectos suministrados únicamente por s1*/
+select ventas.codpj
+from ventas
+group by ventas.codpj
+having count(distinct ventas.codpro) = 1 and max(ventas.codpro) = 'S1';
+
+
+
+
+
