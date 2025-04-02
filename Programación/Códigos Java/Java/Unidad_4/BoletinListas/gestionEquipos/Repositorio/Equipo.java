@@ -53,5 +53,9 @@ public class Equipo {
 	public String toString() {
 		return "Equipo [nombreEquipo=" + nombreEquipo + ", grupoAlumnos=" + grupoAlumnos + "]";
 	}
+	
+	public void borrarAlumno(Alumno a) {
+		
+	}
 
 }
