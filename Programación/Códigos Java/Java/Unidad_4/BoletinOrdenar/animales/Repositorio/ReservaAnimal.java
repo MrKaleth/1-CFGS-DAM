@@ -2,12 +2,7 @@ package animales.Repositorio;
 
 import animales.Modelo.Animal;
 
-public class ReservaAnimal implements Comparable<Animal> {
+public class ReservaAnimal {
 
-	@Override
-	public int compareTo(Animal o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 
 }

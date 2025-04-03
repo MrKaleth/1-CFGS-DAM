@@ -3,7 +3,7 @@ package animales.Modelo;
 import java.time.LocalDate;
 import java.util.Objects;
 
-public class Animal {
+public class Animal implements Comparable<Animal>{
 	private int id;
 	private String nombre;
 	private String especie;
@@ -117,4 +117,10 @@ public class Animal {
 				+ ", clasiGestacion=" + clasiGestacion + "]";
 	}
 
+	@Override
+	public int compareTo(Animal o) {
+		return 0;
+	}
+	
+	
 }
