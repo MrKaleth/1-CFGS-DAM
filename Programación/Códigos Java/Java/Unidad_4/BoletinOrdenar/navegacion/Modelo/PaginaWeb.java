@@ -65,7 +65,7 @@ public class PaginaWeb implements Comparable<PaginaWeb> {
 
 	@Override
 	public int compareTo(PaginaWeb o) {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 
