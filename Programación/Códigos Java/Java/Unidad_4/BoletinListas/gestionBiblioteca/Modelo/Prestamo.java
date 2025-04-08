@@ -64,7 +64,7 @@ public class Prestamo {
 			return false;
 		Prestamo other = (Prestamo) obj;
 		return Objects.equals(fechaPrestamo, other.fechaPrestamo) && id == other.id
-				&& Objects.equals(idUsuario, other.idUsuario) && Objects.equals(libroA_Prestar, other.libroA_Prestar);
+				&& Objects.equals(idUsuario, other.idUsuario) && Objects.equals(libroA_Prestar.obtenerISBN(), other.libroA_Prestar.obtenerISBN());
 	}
 
 	@Override

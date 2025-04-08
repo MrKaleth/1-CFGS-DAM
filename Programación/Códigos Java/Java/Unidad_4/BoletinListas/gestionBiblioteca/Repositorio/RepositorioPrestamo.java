@@ -13,4 +13,29 @@ public class RepositorioPrestamo {
 		this.listaPrestamo = new LinkedList<Prestamo>();
 	}
 
+	protected List<Prestamo> getListaPrestamo() {
+		return listaPrestamo;
+	}
+
+	protected void setListaPrestamo(List<Prestamo> listaPrestamo) {
+		this.listaPrestamo = listaPrestamo;
+	}
+
+	@Override
+	public String toString() {
+		return "RepositorioPrestamo [listaPrestamo=" + listaPrestamo + "]";
+	}
+
+	void addPrestamo(Prestamo p) {
+
+	}
+	
+	void devolverPrestamo(Prestamo p) {
+		
+	}
+	
+	void mostrarLista() {
+		
+	}
+
 }
