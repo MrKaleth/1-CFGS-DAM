@@ -27,14 +27,12 @@ public class GestionaBiblioteca {
 			case 2: {
 
 				f.prestar(b);
-
 				break;
 			}
 
 			case 3: {
 
 				f.devolver(b);
-
 				break;
 			}
 
@@ -91,7 +89,7 @@ public class GestionaBiblioteca {
 		System.out.println("Introduce los datos del libro.");
 		System.out.println("Introduce título. ");
 		String titulo = input.nextLine();
-		System.out.println("Introduce nombre. ");
+		System.out.println("Introduce autor. ");
 		String nombre = input.nextLine();
 		System.out.println("Introduce género. ");
 		String genero = input.nextLine();

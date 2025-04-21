@@ -1,4 +1,3 @@
-'''
 import pygame
 import random
 import os
@@ -155,8 +154,9 @@ while running:
         clock.tick(30)
 
 pygame.quit()
-'''
 
+
+'''
 import pygame
 import random
 import os
@@ -355,3 +355,4 @@ while running:
         clock.tick(30)
 
 pygame.quit()
+'''
