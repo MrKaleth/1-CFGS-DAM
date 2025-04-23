@@ -7,5 +7,13 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="Seccion1"/>
+	<classpathentry kind="src" path=".apt_generated">
+		<attributes>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="Seccion2"/>
+	<classpathentry kind="src" path="Seccion3"/>
+	<classpathentry kind="src" path="Seccion4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
